@@ -4,22 +4,11 @@ const PREFIX = process.env.PREFIX;
 
 var bot = new Discord.Client();
 
-// Put the Music module in the new Client object.
-// This allows for easy access to all the modules
-// functions and data.
-bot.music = require("discord.js-musicbot-addon");
 
-// Now we start the music module.
-bot.music.start(bot, {
-    // Set the api key used for YouTube.
-    // This is required to run the bot.
-    youtubeKey: process.env.BOT_YOUTUBE_TOKEN,
-    botPrefix: PREFIX
-});
 
 // Events.
 bot.on("ready", function() {
-    bot.user.setActivity(`Hi, Im The Music Bot`);
+    bot.user.setActivity(`still on testing`);
     console.log(`${bot.user.username} is Ready!`);
 });
 
